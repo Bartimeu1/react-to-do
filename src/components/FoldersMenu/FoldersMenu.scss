@@ -1,0 +1,123 @@
+.foldersMenu {
+    background: #f4f6f8;
+    height: 100%;
+    padding: 57px 0 0 30px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    &__all {
+        display: flex;
+        align-items: center;
+        padding-left: 12px;
+        margin-bottom: 40px;
+        cursor: pointer;
+        &-title {
+            font-family: 'Roboto';
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 16px;
+            letter-spacing: 0.2px;        
+            color: #000000;
+            transition: 0.3s;
+        }
+        svg {
+            margin-right: 9px;
+            transition: 0.3s;
+        }
+        &:hover {
+            .foldersMenu__all-title {
+                color: #42B883;
+                transition: 0.2s;
+            }
+            svg path {
+                fill: #42B883;
+                transition: 0.2s;
+            }
+        }
+    }
+    &__add {
+        display: flex;
+        align-items: center;
+        margin-top: 47px;
+        cursor: pointer;
+        &-title {
+            font-family: 'Roboto';
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 17px;
+            letter-spacing: 0.15px;
+            color: #767676;
+        }
+        svg {
+            margin-right: 8px;
+        }
+    }
+    &__form {
+        align-items: center;
+        background: #fff;
+        box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        height: 175px;
+        justify-content: flex-start;
+        margin-top: 50px;
+        width: 235px;
+        &--hidden {
+            display: none;
+        }
+        &-input {
+            background: #fff;
+            border: 1px solid #efefef;
+            border-radius: 4px;
+            height: 32px;
+            margin: 18px 0 13px;
+            width: 80%;
+            padding: 5px 0 5px 15px;
+            &::placeholder {
+                letter-spacing: 0.15px;
+                color: #C7C7C7;
+            }
+        }
+        &-list {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            margin: 0 -2.5px;
+        }
+        &-color {
+            border-radius: 50%;
+            height: 17px;
+            margin: 2.5px;
+            width: 17px;
+            cursor: pointer;
+            &--current {
+                border: 2px solid #525252;
+                border-radius: 50%;
+                height: 17px;
+                margin: 2.5px;
+                width: 17px;
+                cursor: pointer;
+            }
+        }
+        &-button {
+            background: #4dd599;
+            border: 1px solid #4dd599;
+            border-radius: 4px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 13px;
+            padding: 12px 0;
+            width: 80%;
+            transition: 0.3s;
+            &:hover {
+                background: inherit;
+                color: #4dd599;
+                transition: 0.3s;
+            }
+        }
+    }
+}

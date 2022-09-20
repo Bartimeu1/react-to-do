@@ -1,0 +1,103 @@
+.tasksMenu {
+    padding-top: 50px;
+    margin-left: 57px;
+    &-title {
+        font-family: 'Montserrat';
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 39px;
+        margin-bottom: 52px;
+    }
+    &__add {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        cursor: pointer;
+        margin-bottom: 15px;
+        &-title {
+            font-family: 'Roboto';
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 17px;
+            letter-spacing: 0.15px;
+            color: #767676;
+        }
+        svg {
+            margin-right: 8px;
+        }
+        &:hover {
+            .tasksMenu__add-title {
+                color: #42B883;
+                transition: 0.2s;
+            }
+            svg path {
+                stroke: #42B883;
+                transition: 0.2s;
+            }
+        }
+    }
+    &__form {
+        &--hidden {
+            display: none;
+        }
+        &-input {
+            width: 450px;
+            border: 1px solid #EFEFEF;
+            border-radius: 4px;
+            padding: 9px 0 9px 14px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 0.15px;
+            color: #000;
+            margin-bottom: 19px;
+            &::placeholder {
+                color: #C7C7C7;
+            }
+        }
+        &__buttons {
+            display: flex;
+            align-items: center;
+        }
+        &-add {
+            border: 1px solid #4DD599;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+            letter-spacing: 0.15px;
+            color: #FFFFFF;
+            background: #4DD599;
+            border-radius: 4px;
+            padding: 10px 20px;
+            margin-right: 9px;
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover {
+                background: inherit;
+                color: #4DD599;
+                transition: 0.3s;
+            }
+        }
+        &-close {
+            border: 1px solid #F4F6F8;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+            letter-spacing: 0.15px;
+            color: #9C9C9C;
+            background: #F4F6F8;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover {
+                background: inherit;
+                border: 1px solid #4DD599;
+                transition: 0.3s;
+                color: #4DD599;
+            }
+        }
+    }
+}
