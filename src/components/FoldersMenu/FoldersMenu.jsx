@@ -3,7 +3,7 @@ import './FoldersMenu.scss';
 
 import Folder from '../Folder/Folder';
 
-function FoldersMenu({foldersData, currentFolderId, changeCurrentFolder, availableColors, addFolder, choiceAllFolders}) {
+function FoldersMenu({foldersData, currentFolderId, changeCurrentFolder, availableColors, addFolder, choiceAllFolders, unChoiceAllFolders}) {
     // Toogle Active Menu
     const [addFormActive, setAddFormActive] = useState(false);
     // Handle Input Value
@@ -31,6 +31,7 @@ function FoldersMenu({foldersData, currentFolderId, changeCurrentFolder, availab
                     id={item.id} 
                     currentFolderId={currentFolderId}
                     changeCurrentFolder={changeCurrentFolder}
+                    unChoiceAllFolders={unChoiceAllFolders}
                     ></Folder>
                 </li>
             ))}

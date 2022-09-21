@@ -59,7 +59,10 @@ function App() {
   // Choice All Items
   const [сhoiceAll, setChoiceAll] = useState(false);
   function choiceAllFolders() {
-    setChoiceAll(prevState => !prevState);
+    setChoiceAll(true);
+  }
+  function unChoiceAllFolders() {
+    setChoiceAll(false);
   }
 
   return (
@@ -71,6 +74,7 @@ function App() {
        availableColors={availableColors}
        addFolder={addFolder}
        choiceAllFolders={choiceAllFolders}
+       unChoiceAllFolders={unChoiceAllFolders}
        ></FoldersMenu>
        <TasksMenu 
        title={currentFolderTitle} 

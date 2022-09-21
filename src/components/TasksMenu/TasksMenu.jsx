@@ -33,21 +33,33 @@ export default function TasksMenu({title, currentFolderId, color, сhoiceAll}) {
 
   return (
     <div className='tasksMenu'>
-        <h1 className="tasksMenu-title" style={{color: color}}>{title}</h1>
+        {сhoiceAll === false ?
+            <h1 className="tasksMenu-title" style={{color: color}}>{title}</h1> :
+            <h1 className="tasksMenu-title">Все задачи</h1>
+        }
         <ul>
-            {tasksData.map((item) => (
-                <li key={item.content}>
-                    {item.id === currentFolderId ? <Task content={item.content}></Task> : null}
-                </li>
-            ))}
+            {сhoiceAll === false ?
+                tasksData.map((item) => (
+                    <li key={item.content}>
+                        {item.id === currentFolderId ? <Task content={item.content}></Task> : null}
+                    </li>
+                )) :
+                tasksData.map((item) => (
+                    <li key={item.content}>
+                        <Task content={item.content}></Task>
+                    </li>
+                ))
+            }
         </ul>
-        <button className="tasksMenu__add">
+        {сhoiceAll === false ?
+            <button className="tasksMenu__add">
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6 1V11" stroke="#868686" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 <path d="M1 6H11" stroke="#868686" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
             <h4 className="tasksMenu__add-title" onClick={() => setAddFormActive(prevState => !prevState)}>Новая задача</h4>
-        </button>
+            </button> : null
+        }
         <div className={addFormActive ? 'tasksMenu__form' : 'tasksMenu__form--hidden'}>
             <input onInput={handleInputValue} type="text" className="tasksMenu__form-input" placeholder='Текст задачи'/>
             <div className="tasksMenu__form__buttons">
